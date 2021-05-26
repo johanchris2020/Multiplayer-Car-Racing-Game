@@ -14,11 +14,11 @@ class Form {
     display() {
         var title = createElement('h2');
         title.html("Car Racing Game");
-        title.position(200, 10);
+        title.position(displayWidth/2 + 200, 0);
 
-        this.input.position(180, 160);
+        this.input.position(displayWidth/2 - 10, displayHeight/2 - 110);
 
-        this.button.position(180, 200);
+        this.button.position(displayWidth/2 - 10, displayHeight/2 - 85);
 
         this.button.mousePressed(()=>{
             this.input.hide();
