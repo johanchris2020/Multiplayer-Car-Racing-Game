@@ -16,12 +16,12 @@ function preload() {
     car2Img = loadImage("images/car2.png");
     car3Img = loadImage("images/car3.png");
     car4Img = loadImage("images/car4.png");
-    track = loadImage("images/track.png");
+    track = loadImage("images/track.jpg");
     ground = loadImage("images/ground.png");
 }
 
 function setup(){
-  canvas = createCanvas(displayWidth - 20, displayHeight-30);
+  canvas = createCanvas(displayWidth - 5, displayHeight-119);
   database = firebase.database();
   game = new Game();
   game.getState();
@@ -36,5 +36,9 @@ function draw(){
   if(gameState === 1){
     clear();
     game.play();
+  }
+
+  if(gameState === 2){
+    game.end();        
   }
 }
